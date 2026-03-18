@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Зал ресторана</h1>
+
+  <div class="hall">
+
+    {% for table in tables %}
+
+    <div class="table"
+        style="left:{{table.x}}px; top:{{table.y}}px;">
+        
+        <a href="/reserve/{{table.id}}/">+</a>
+    </div>
+    
+    {% endfor %}
+
+  </div>
+{% endblock %}
